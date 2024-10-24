@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Movie Poster Gallery">
+    <meta name="keyword" content="HTML, CSS, WebDevelopment, Entertainment, Poster, Movie">
+    <meta name="author" content="Web Development Mentor">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #d4d2d2;
+        }
+        
+        figure {
+            display: inline-block;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 65px;
+            padding: 10px;
+            background-color: rgb(107, 107, 107);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease, border 0.3s ease;
+            border-radius: 85px;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        figure:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        img:hover {
+            border: 3px solid #000000;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<figure>
+    <img src="pics/goodfellas.webp" alt="Goodfellas Movie Poster">
+    <figcaption>The classic gangster movie Goodfellas</figcaption>
+</figure>
+
+<figure>
+    <img src="pics/spiderman.webp" alt="Spiderman Cartoon Movie Poster">
+    <figcaption>SpiderMan movie with multiple Universes</figcaption>
+</figure>
+
+<figure>
+    <img src="pics/idiocracy.jpg" alt="Idiocracy Movie Poster">
+    <figcaption>A comedy about a distopian future</figcaption>
+</figure>
+<a href="entertainmentPage.html">Home Screen</a>
+</body>
+</html>

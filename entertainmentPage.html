@@ -1,0 +1,234 @@
+<!--Task 1: Interactive Navigation Links
+Design a navigation bar with interactive links that change appearance on hover. Use CSS pseudoclasses to style the links with hover 
+effects, such as color changes or underlines, to enhance user interaction and visual feedback.
+   
+Task 2: Eye-catching Image Gallery
+Create an image gallery showcasing entertainment content, such as movie posters, album covers, or game screenshots. Implement CSS styles
+to add hover effects to the images, such as adding a border or other style that makes the gallery visually engaging and interactive.
+
+Task 3: Dynamic Call-to-Action Buttons
+Integrate call-to-action (CTA) buttons that prompt users to take specific actions, such as "Watch Now," "Listen Here," or "Play Game." 
+Apply CSS pseudoclasses to style the buttons with hover effects, such as color changes or shadows, to make them visually dynamic and 
+inviting.
+
+Task 4: Interactive Form for User Feedback
+Develop a feedback form where users can provide comments, ratings, or suggestions about the entertainment content. Use CSS pseudoclasses
+to style form elements, such as text fields and submit buttons, with hover effects or transitions to make the form visually appealing 
+and user-friendly.-->
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Engaging Entertainment Page</title>
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creating an Engaging Entertainment Page with Multimedia and CSS.">
+    <meta name="keyword" content="HTML, CSS, WebDevelopment, Entertainment">
+    <meta name="author" content="Web Development Mentor">
+
+    <style>
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: darkgray;
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    nav ul li a {
+        display: block;
+        color: rgb(98, 56, 56);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none
+    }
+
+    nav ul li a:hover {
+        background-color: gainsboro;
+        text-decoration: underline;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+
+    .cta-button {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #007BFF;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .watch-now {
+        background-color: #28a745;
+        color: black;
+    }
+
+    .watch-now:hover {
+        background-color: #0f3e19;
+        color: white;
+    }
+
+    .listen-here {
+        background-color: #17a2b8;
+        color: black;
+    }
+
+    .listen-here:hover {
+        background-color: #09424a; 
+        color: white;           
+    }
+
+    .play-game {
+        background-color: #ffc107;
+        color: black;
+    }
+
+    .play-game:hover {
+        background-color: #614903;
+        color: white;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .feedback-container {
+        background-color: #dbdcdc;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input:hover, textarea:hover {
+        border: 2px solid black;
+    }
+
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #024388;
+        color: black;        
+    }
+
+    .rating {
+        display: flex;
+        justify-content: space-between;
+        max-width: 200px;
+        margin: 10px 0;
+    }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Engaging Entertainment Page with Multimedia and CSS</h1>
+    <h2>Navigation Bar with Interactive Links</h2>
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="about me">About Me</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact us">Contact Us</a></li>
+    </ul>
+    </nav>
+
+    <a href="#" class="cta-button watch-now">Watch Now</a>
+    <a href="#" class="cta-button listen-here">Listen Here</a>
+    <a href="#" class="cta-button play-game">Play Game</a>
+
+    <div class="feedback-container">
+        <h2>Entertainment Feedback Form</h2>
+        <form action="/submit-feedback" method="POST">            
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name..." required>    
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email..." required>    
+            
+            <label for="rating">Rate the Entertainment Content:</label>
+            <select id="rating" name="rating">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+            </select>    
+            
+            <label for="comments">Comments or Suggestions:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Write your comments or suggestions here..."></textarea>    
+            
+            <label for="content-type">What form of entertainment are you giving feedback on?</label>
+            <select id="content-type" name="content-type">
+                <option value="movie">Movie</option>
+                <option value="TV Show">TV Show</option>
+                <option value="music">Music</option>
+                <option value="podcast">Podcast</option>
+                <option value="other">Other</option>
+            </select>    
+            
+            <input type="submit" value="Submit Feedback">
+    
+        </form>
+    </div>
+
+</body>
+
+
+
+
+
+
+</html>

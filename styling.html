@@ -1,0 +1,260 @@
+<!--Task 1: Styling a User Registration Form
+Create an HTML form for user registration that includes fields for name, email, password, and a submit button. Use CSS to style the form
+elements, focusing on layout, spacing, borders, and hover effects to enhance usability and aesthetics.
+
+Task 2: Enhancing Lists for Navigation
+Implement an unordered list to serve as a navigation menu, including links to Home, About, Services, and Contact pages. Style the list 
+with CSS to create a horizontal menu with custom bullet points or icons, and apply hover effects to the links.
+
+Task 3: Styling Tables for Data Presentation
+Design a table to display data (e.g., a schedule, product list, or statistical information). Apply CSS to improve the readability and 
+visual appeal of the table, focusing on header styles, cell padding, border styles, and alternating row colors.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Registration Form">
+    <meta name="author" content="Web Development Mentor">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .nav-container {
+            width: 100%;
+            background-color: darkgray;
+        }
+
+        .nav-container h2 {
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: darkgray;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: rgb(98, 56, 56);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: gainsboro;
+            text-decoration: underline;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .registration-container {
+            background-color: #efeded;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+            border-color: #000000;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003670;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            .registration-container {
+                padding: 20px;
+            }
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            background-color: rgb(214, 214, 214);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+                           
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #a9a8a8;
+        }
+
+        th {
+            background-color: #034183;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #a8a8a8;
+        }
+
+        tr:hover {
+            background-color: #ffffff;
+        }
+
+        td {
+            color: #000000;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <h2>Navigation Bar with Interactive Links</h2>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about me">About Me</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact us">Contact Us</a></li>
+        </ul>
+        </nav>
+    </div>  
+
+<div class="content">
+    <div class="registration-container">
+        <h2>User Registration</h2>
+        <form action="/submit-registration" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</div>
+
+
+    <h2>Schedule</h2>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Movie</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>IT Chapter 1</td>
+                <td>9PM</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>My Uncle Vinnie</td>
+                <td>6PM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Spider-Man: Across the Spider-verse</td>
+                <td>5PM</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>IT Chapter 2</td>
+                <td>9PM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Inside Out</td>
+                <td>5PM</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
